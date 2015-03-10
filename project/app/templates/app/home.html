@@ -1,9 +1,172 @@
 {% extends "app/base.html" %}
 
 {%block title %} Index page {% endblock %}
-
+{% block otherlinks %}
+    <!-- Bootstrap Core CSS -->
+    <link href="{{STATIC_URL}}app/css/bootstrap.min.css" rel="stylesheet">
+	
+    <link rel="stylesheet" href="{{STATIC_URL}}app/css/leaflet.css" />
+    <!-- Custom CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+{% endblock %}
 {% block body %}
-<div class="greenBOX">
-	<h1>This is the home.html</h1>
-</div>
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+
+        <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+	        	<div class="menuextras">
+					<div class="extras">
+						<ul>
+							<li>
+									<a href="credits.html">You Have <strong>0</strong> New Messages</a>
+							</li>
+							<li>
+									<a href="credits.html">Coins: <strong>6</strong></a>
+							</li>
+			        		<li><a href="page-login.html"> <strong>UserName</strong></a></li>
+			        	</ul>
+					</div>
+		        </div>
+		        <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="index.html"><img src="{{STATIC_URL}}app/img/mPurpose-logo.png" alt="Logo"></a></li>
+						<li class="active">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="credits.html">Example</a>
+						</li>
+						<li>
+							<a href="credits.html">Example</a>
+						</li>
+						<li>
+							<a href="credits.html">Example</a>
+						</li>
+						<li>
+							<a href="credits.html">Example</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="section section-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Hello Name</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+       
+ 
+        <div class="section">
+	    	<div class="container">
+	    		<div class="row">
+	    			<h2>Scheduled Lessons: </h2>
+
+	    			<div class="col-md-12">
+						
+	    				<table class="events-list">
+
+	    					<tr>
+	    						<td>
+	    							
+
+	    							<div class="event-date">
+	    								<div class="event-day">16</div>
+	    								<div class="event-month">MAR</div>
+	    							<h4 class="moshe">16:00</h4>
+	    							</div>	
+	    						</td>
+
+	    						<td>
+
+	    							Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Siemens Arena</td>
+	    					
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td>
+	    							<div class="event-date">
+	    								<div class="event-day">5</div>
+	    								<div class="event-month">APR</div>
+	    								<h4 class="moshe">16:00</h4>
+	    							</div>
+	    						</td>
+	    						<td>
+	    							Phasellus et est quis diam iaculis fringilla id nec sapien.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Nike Arena</td>
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td>
+	    							<div class="event-date">
+	    								<div class="event-day">31</div>
+	    								<div class="event-month">MAY</div>
+	    								<h4 class="moshe">16:00</h4>
+	    							</div>
+	    						</td>
+	    						<td>
+	    							Ut consectetur commodo justo, sed sollicitudin massa venenatis ut 2013.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td>
+	    							<div class="event-date">
+	    								<div class="event-day">17</div>
+	    								<div class="event-month">SEP</div>
+	    								<h4 class="moshe">16:00</h4>
+	    							</div>
+	    						</td>
+	    						<td>
+	    							Pellentesque justo turpis, fringilla sit amet pulvinar ut, tincidunt nec leo.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td>
+	    							<div class="event-date">
+	    								<div class="event-day">16</div>
+	    								<div class="event-month">MAR</div>
+	    								<h4 class="moshe">16:00</h4>
+	    							</div>
+	    						</td>
+	    						<td>
+	    							Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Siemens Arena</td>
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+	    					<tr>
+	    						<td>
+	    							<div class="event-date">
+	    								<div class="event-day">5</div>
+	    								<div class="event-month">APR</div>
+	    								<h4 class="moshe">16:00</h4>
+	    							</div>
+	    						</td>
+	    						<td>
+	    							Phasellus et est quis diam iaculis fringilla id nec sapien.
+	    						</td>
+	    						<td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Nike Arena</td>
+	    						<td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
+	    					</tr>
+
+	    				</table>
+
+	    			</div>
+	    		</div>
+			</div>
+		</div>
 {% endblock %}
