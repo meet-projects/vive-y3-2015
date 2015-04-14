@@ -7,4 +7,5 @@ urlpatterns = patterns('',
     url(r'^home/$', views.home, name='home'),
     url(r'^$', views.index, name='index'),
     url(r'^base/$', views.base, name='index'),
+    url(r'^profile/$', views.profile, name='profile'),
 )

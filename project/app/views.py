@@ -7,3 +7,5 @@ def home(request):
 	return render(request, 'app/home.html', {})
 def base(request):
 	return render(request, 'app/after_login_base.html', {})
+def profile(request):
+	return render(request, 'app/profile.html', {})
