@@ -9,3 +9,5 @@ def base(request):
 	return render(request, 'app/after_login_base.html', {})
 def profile(request):
 	return render(request, 'app/profile.html', {})
+def aboutusfun(request):
+	return render(request, 'app/aboutus.html', {})
