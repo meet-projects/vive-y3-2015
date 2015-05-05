@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from app.models import Accounts
 # Create your views here.
-def index(request):
-	return render(request, 'app/index.html', {})
+def search_tutors(request):
+	return render(request, 'app/search_tutors.html', {})
 def home(request):
 	email = request.POST["email"]
 	password = request.POST["password"]
