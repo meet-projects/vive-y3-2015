@@ -1,14 +1,12 @@
 from django.shortcuts import render
-from app.models import Accounts
+
 # Create your views here.
 def index(request):
 	return render(request, 'app/index.html', {})
 def home(request):
 	email = request.POST["email"]
 	password = request.POST["password"]
-
-	user = Accounts.objects.filter(email = email, password = password)
-	if len(user) == 1:
+	if email == "dkgs1998@gmail.com" and password == "meetyear13":
 		return render(request, 'app/home.html', {})
 	else:
 		return render(request, 'app/index.html', {})
