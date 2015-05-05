@@ -18,3 +18,12 @@ def profile(request):
 	return render(request, 'app/profile.html', {})
 def aboutusfun(request):
 	return render(request, 'app/aboutus.html', {})
+def register(request):
+	email = request.POST["email"]
+	password = request.POST["password"]
+
+	tempUser = Accounts.objects.filter(email = email, password = password)
+	if len(tempUser)==0:
+		user = Accounts(email = email, password = password)
+		user.save()
+	return render(request, 'app/index.html', {})
