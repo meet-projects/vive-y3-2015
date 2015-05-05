@@ -307,7 +307,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{STATIC_URL}}app/js/bootstrap.min.js"></script>
-
-
+{%  if flash != none %}
+    <script>
+        alert( {{ flash }});
+    </script>
+{% endif %}
 
 {% endblock %}

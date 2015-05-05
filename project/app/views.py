@@ -13,7 +13,7 @@ def home(request):
 	else:
 		return render(request, 'app/index.html', {})
 def base(request):
-	return render(request, 'app/after_login_base.html', {})
+	return render(request, 'app/index.html', {})
 def profile(request):
 	return render(request, 'app/profile.html', {})
 def aboutusfun(request):
@@ -23,7 +23,11 @@ def register(request):
 	password = request.POST["password"]
 
 	tempUser = Accounts.objects.filter(email = email, password = password)
+	vari = {}
 	if len(tempUser)==0:
 		user = Accounts(email = email, password = password)
 		user.save()
-	return render(request, 'app/index.html', {})
+		vari["flash"] = "you have registred. P.S. django sucks"
+	else:
+		vari["flash"] = "you have not registred"
+	return render(request, 'app/index.html', vari)

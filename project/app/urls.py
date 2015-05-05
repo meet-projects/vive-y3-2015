@@ -6,7 +6,7 @@ from app import views
 urlpatterns = patterns('',
     url(r'^home/$', views.home, name='home'),
     url(r'^search_tutors/$', views.search_tutors, name='search_tutors'),
-    url(r'^base/$', views.search_tutors, name='index'),
+    url(r'^$', views.base, name='index'),
     url(r'^profile/$', views.profile, name='profile'),
     url(r'^aboutusurl/$', views.aboutusfun, name='aboutus'),
     url(r'^register/$', views.register, name='register'),
